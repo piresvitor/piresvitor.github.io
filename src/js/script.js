@@ -1,4 +1,3 @@
-
 function revealContact(element, linkUrl, displayText) {
   const valueSpan = element.querySelector(".contact-value");
 
