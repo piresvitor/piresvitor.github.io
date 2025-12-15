@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitor Pires</title>
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.svg?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header class="sticky-header">
+      <div class="container nav-container">
+        <a href="#hero" class="logo">Vitor Pires</a>
+        <nav>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="section-pad">
+        <div class="container split-layout hero-content">
+          <div class="text-content">
+            <h1>Vitor Gabriel de Campos Pires</h1>
+            <h2 class="subtitle">Desenvolvedor de Software</h2>
+            <p class="lead">
+              Desenvolvedor Backend com experiência prática em projetos reais na
+              construção de APIs, integração de sistemas e modelagem de dados.
+              Experiência prática com Python e ecossistema Node.js, priorizando
+              código limpo, testes e boas práticas. Atuação no desenvolvimento
+              de interfaces para suporte às soluções de backend.
+            </p>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn btn-primary">Projetos</a>
+              <a href="#contact" class="btn btn-outline">Contato</a>
+            </div>
+          </div>
+          <div class="image-content">
+            <div class="photo-container">
+              <img
+                src="/src/img/perfil.jpg"
+                alt="Foto de Vitor Gabriel de Campos Pires"
+                class="profile-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-pad bg-alt">
+        <div class="container">
+          <h2 class="section-title-left">Minhas Habilidades</h2>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fa-brands fa-python accent-icon"></i>
+                <h3>Backend &<br />Linguagens</h3>
+              </div>
+              <ul>
+                <li>Python</li>
+                <li>Node.js</li>
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>APIs RESTful</li>
+                <li>Java</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fa-solid fa-database accent-icon"></i>
+                <h3>Banco de Dados &<br />ORM</h3>
+              </div>
+              <ul>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>SQLite</li>
+                <li>Drizzle ORM</li>
+                <li>SQLAlchemy</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fa-solid fa-laptop-code accent-icon"></i>
+                <h3>Frontend &<br />Design</h3>
+              </div>
+              <ul>
+                <li>React.js</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwind CSS</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-header">
+                <i class="fa-brands fa-docker accent-icon"></i>
+                <h3>Ferramentas &<br />DevOps</h3>
+              </div>
+              <ul>
+                <li>Linux</li>
+                <li>Docker</li>
+                <li>Git</li>
+                <li>Vitest</li>
+                <li>Swagger/OpenAPI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-pad">
+        <div class="container">
+          <h2 class="section-title-left">Projetos Recentes</h2>
+          <div class="projects-list">
+            <article class="project-card">
+              <div class="card-header">
+                <h2>Plataforma de Acessibilidade Urbana</h2>
+                <div class="tech-badges">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Fastify</span>
+                  <span class="badge">TypeScript</span>
+                  <span class="badge">PostgreSQL</span>
+                  <span class="badge">DrizzleORM</span>
+                  <span class="badge">Docker</span>
+                  <span class="badge">React</span>
+                </div>
+              </div>
+
+              <ul class="project-details">
+                <li>
+                  Desenvolvimento de plataforma Full Stack colaborativa com
+                  geolocalização via Google Maps API.
+                </li>
+                <li>
+                  Engenharia de backend cobrindo 33 endpoints com 100% de
+                  cobertura de testes E2E (Vitest), garantindo validação
+                  rigorosa (Zod).
+                </li>
+                <li>
+                  Otimização de performance de banco de dados com agregações SQL
+                  avançadas e containerização completa com Docker.
+                </li>
+                <li>
+                  Dashboard analítico para visualização de dados geográficos em
+                  tempo real.
+                </li>
+              </ul>
+
+              <div class="card-footer">
+                <a
+                  href="https://github.com/piresvitor/Mapa_Colaborativo_Acessibilidade"
+                  class="btn btn-github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="card-header">
+                <h2>Solar Energy API</h2>
+                <div class="tech-badges">
+                  <span class="badge">Python</span>
+                  <span class="badge">Flask</span>
+                  <span class="badge">SQLite</span>
+                  <span class="badge">SQLAlchemy</span>
+                  <span class="badge">NumPy</span>
+                  <span class="badge">Swagger/OpenAPI</span>
+                </div>
+              </div>
+
+              <ul class="project-details">
+                <li>
+                  API RESTful para simulação da viabilidade energética solar
+                </li>
+                <li>
+                  Cálculos financeiros complexos e projeções de economia
+                  utilizando NumPy.
+                </li>
+                <li>
+                  Documentação técnica completa e interativa implementada com
+                  Swagger UI (OpenAPI).
+                </li>
+                <li>
+                  Implementação de autenticação JWT para proteção de dados.
+                </li>
+              </ul>
+
+              <div class="card-footer">
+                <a
+                  href="https://github.com/piresvitor/Solar-Energy-API"
+                  class="btn btn-github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no GitHub</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section-pad bg-alt">
+        <div class="container">
+          <h2 class="section-title-left">Experiência</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+
+              <h3 class="timeline-role">
+                Freelancer | Desenvolvedor Full Stack
+              </h3>
+              <span class="timeline-date">Set 2024 – Presente</span>
+
+              <ul class="timeline-details">
+                <li>
+                  Desenvolvimento de soluções customizadas para automação de
+                  processos em comércios locais (Varejo e Distribuição).
+                </li>
+                <li>
+                  Criação de sistema de gestão de orçamentos para equipe de
+                  vendas, automatizando cálculos, geração de PDFs dinâmicos e
+                  envio por e-mail.
+                </li>
+                <li>
+                  Modelagem de bancos de dados (PostgreSQL, MongoDB) usando ORMs
+                  modernos para otimização de queries e resolução de problemas
+                  de performance (N+1).
+                </li>
+                <li>
+                  Implementação de APIs REST robustas com autenticação JWT e
+                  tratamento de erros padronizado.
+                </li>
+                <li>
+                  Criação de interfaces administrativas responsivas
+                  (Mobile-First) com React.js e Tailwind CSS.
+                </li>
+                <li>
+                  Automação de processos repetitivos e integração entre sistemas
+                  utilizando scripts em Python.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education-contact" class="section-pad">
+        <div class="container split-columns">
+          <div class="col-half">
+            <h2 class="section-title-left">Formação Acadêmica</h2>
+
+            <div class="edu-item">
+              <h3>
+                <img
+                  src="src/img/logo_facens.jpg"
+                  alt="Logo Facens"
+                  class="edu-logo"
+                />
+                <div>
+                  Centro Universitário Facens
+                  <span class="edu-separator">|</span> Análise e Desenvolvimento
+                  de Sistemas
+                </div>
+              </h3>
+              <span class="edu-date">(2024-2026)</span>
+            </div>
+
+            <div class="edu-item">
+              <h3>
+                <img
+                  src="src/img/logo_etec.jpg"
+                  alt="Logo ETEC"
+                  class="edu-logo"
+                />
+                <div>
+                  ETEC <span class="edu-separator">|</span> Técnico em
+                  Informática
+                </div>
+              </h3>
+              <span class="edu-date">(2012-2014)</span>
+            </div>
+          </div>
+
+          <div class="col-half" id="contact-column">
+            <h2 class="section-title-left" id="contact">Vamos Conversar?</h2>
+            <p class="contact-intro">
+              Entre em contato para oportunidades ou projetos.
+            </p>
+
+            <div class="contact-links">
+              <div
+                class="contact-reveal"
+                onclick="revealContact(this, 'mailto:vitor.pires4@gmail.com', 'vitor.pires4@gmail.com')"
+              >
+                <span class="contact-icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <span class="contact-label">E-mail:</span>
+                <span class="contact-value">Clique para ver</span>
+              </div>
+
+              <div
+                class="contact-reveal"
+                onclick="revealContact(this, 'tel:+5515981402298', '(15) 98140-2298')"
+              >
+                <span class="contact-icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                <span class="contact-label">Telefone:</span>
+                <span class="contact-value">Clique para ver</span>
+              </div>
+            </div>
+
+            <div class="social-icons-large">
+              <a
+                href="https://www.linkedin.com/in/vitor-pires-13a075305/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/piresvitor"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/vitorpyres/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://x.com/torpires"
+                target="_blank"
+                aria-label="X / Twitter"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Copyright © 2025 Vitor Pires</p>
+      </div>
+    </footer>
+
+    <a href="#" id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
