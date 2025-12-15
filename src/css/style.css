@@ -28,6 +28,19 @@ body {
   line-height: 1.4;
 }
 
+header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a.active {
+  color: var(--accent-color);
+}
+
+.contact-value {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;

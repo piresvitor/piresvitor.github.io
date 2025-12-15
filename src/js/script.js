@@ -1,3 +1,4 @@
+
 function revealContact(element, linkUrl, displayText) {
   const valueSpan = element.querySelector(".contact-value");
 
@@ -7,76 +8,73 @@ function revealContact(element, linkUrl, displayText) {
   }
 
   valueSpan.textContent = displayText;
-  valueSpan.style.color = "var(--accent-color)";
-  valueSpan.style.fontWeight = "600";
   element.classList.add("revealed");
 }
 
-const backToTopButton = document.getElementById('backToTop');
-const header = document.querySelector('header');
-const navLinks = document.querySelectorAll('nav ul li a');
-const sections = document.querySelectorAll('section');
+const backToTopButton = document.getElementById("backToTop");
+const header = document.querySelector("header");
+const navLinks = document.querySelectorAll("nav ul li a");
+const sections = document.querySelectorAll("section");
 
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
+let lastScrollY = 0;
 
-  if (scrollPosition > 300) {
-    backToTopButton.classList.add('show');
-  } else {
-    backToTopButton.classList.remove('show');
-  }
+function onScroll() {
+  const currentScroll = window.scrollY;
 
-  if (scrollPosition > 0) {
-    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-  } else {
-    header.style.boxShadow = 'none';
-  }
+  if (Math.abs(currentScroll - lastScrollY) < 50) return;
+  lastScrollY = currentScroll;
 
-  let currentSection = '';
+  backToTopButton.classList.toggle("show", currentScroll > 300);
+  header.classList.toggle("scrolled", currentScroll > 0);
+
+  let currentSection = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100; 
-    const sectionHeight = section.clientHeight;
-
-    if (scrollPosition >= sectionTop) {
-      currentSection = section.getAttribute('id');
+    if (currentScroll >= section.offsetTop - 120) {
+      currentSection = section.id;
     }
   });
 
   navLinks.forEach(link => {
-    link.classList.remove('active'); 
-    if (link.getAttribute('href').includes(currentSection)) {
-      link.style.color = "var(--accent-color)"; 
-    } else {
-      link.style.color = ""; 
-    }
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href").includes(currentSection)
+    );
   });
-});
+}
 
-backToTopButton.addEventListener('click', (e) => {
-  e.preventDefault();
+window.addEventListener("scroll", onScroll, { passive: true });
+
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+if (!prefersReducedMotion) {
+  const sr = ScrollReveal({
+    origin: "top",
+    distance: "30px",
+    duration: 600,
+    delay: 100,
+    easing: "ease-out",
+    reset: false,
+    mobile: false
+  });
+
+  sr.reveal(".text-content", { origin: "left" });
+  sr.reveal(".image-content", { origin: "right", delay: 200 });
+  sr.reveal(".section-title-left");
+  sr.reveal(".timeline-item", { origin: "left" });
+
+  sr.reveal(
+    ".skill-category, .project-card, .col-half",
+    { interval: 150 }
+  );
+}
+
+backToTopButton.addEventListener("click", event => {
+  event.preventDefault();
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth"
   });
 });
-
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '50px',
-  duration: 2000,
-  delay: 200,
-  reset: false 
-});
-
-sr.reveal('.text-content', { origin: 'left' });
-sr.reveal('.image-content', { origin: 'right', delay: 400 });
-
-sr.reveal('.section-title-left', {}); 
-sr.reveal('.skill-category', { interval: 200 }); 
-
-sr.reveal('.project-card', { interval: 200 }); 
-
-sr.reveal('.timeline-item', { origin: 'left', distance: '100px' });
-
-sr.reveal('.col-half', { interval: 200 });
